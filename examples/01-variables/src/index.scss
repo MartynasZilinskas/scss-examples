@@ -1,0 +1,9 @@
+$blue: lightblue;
+
+h1 {
+    color: $blue;
+}
+
+.content {
+    color: darken($blue, 40);
+}
