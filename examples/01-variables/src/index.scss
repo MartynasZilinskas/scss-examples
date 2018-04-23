@@ -1,4 +1,5 @@
 $blue: lightblue;
+$colors: #abcdef #d82a5f #4bb8a5;
 
 h1 {
     color: $blue;
@@ -6,4 +7,8 @@ h1 {
 
 .content {
     color: darken($blue, 40);
+}
+
+.list {
+    background-color: nth($colors, 1);
 }
