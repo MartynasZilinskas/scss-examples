@@ -1,3 +1,42 @@
 body {
     background-color: lightblue;
 }
+
+// Hierarchy  (e.g. ".container > h1")
+.container {
+    border: black solid 1px;
+    padding: 5px;
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        padding-left: 50px;
+    }
+}
+
+// Additional class names (e.g. "button big")
+.button {
+    border-radius: 5px;
+    padding: 5px;
+
+    &.big {
+        padding: 10px;
+    }
+
+    &.small {
+        padding: 0;
+        size: 8px;
+    }
+}
+
+// Children wildcard
+.action-bar {
+    background-color: white;
+    padding: 5px;
+
+    *:last-child {
+        background-color: lightcoral;
+    }
+}
