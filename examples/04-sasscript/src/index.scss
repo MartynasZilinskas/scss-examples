@@ -1,45 +1,17 @@
-body {
-    background-color: lightblue;
-}
+$text-sizes: (
+    small: 8px,
+    medium: 14px,
+    big: 18px,
+    huge: 24px
+);
 
-// Simple mixin
-@mixin funky-text($size: 4em) {
-    font: {
-        family: fantasy;
-        size: $size;
-        weight: bold;
-    }
-}
+.text {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 
-.funky {
-    @include funky-text;
-}
-
-.big-funky {
-    @include funky-text(8em);
-}
-
-// Variable arguments
-@mixin box-shadow($shadows...) {
-    -moz-box-shadow: $shadows;
-    -webkit-box-shadow: $shadows;
-    box-shadow: $shadows;
-}
-
-.shadows {
-    @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
-}
-
-// Mixin with @content
-$color: white;
-@mixin colors($color: lightcoral) {
-    background-color: $color;
-    @content;
-    border-color: $color;
-}
-
-.button {
-    @include colors {
-        color: $color;
+    @each $name, $size in $text-sizes {
+        &.#{$name} {
+            font-size: $size;
+        }
     }
 }
