@@ -40,3 +40,12 @@ body {
         background-color: lightcoral;
     }
 }
+
+// Nested properties
+.funky {
+    font: {
+        family: fantasy;
+        size: 4em;
+        weight: bold;
+    }
+}
